@@ -1,0 +1,19 @@
+# Branding
+LIVECDNAME=${DISTRONAME}-mate
+LIVECDNAME_L=${DISTRONAME_L}-mate
+LIVECDUSERNAME=${RELEASE}
+LIVECD_ISO_PREFIX=${DISTRONAME_L}-mate
+
+# For GNOME artwork
+LOGO_COLOUR=blue
+
+# Package selection
+META_GNOME_desktop_ADD="dolphinos-artwork dolphinos-gdm-themes epiphany-browser discover read-edid"
+META_GNOME_desktop_ADD="${META_desktop_ADD} gthumb gnote"
+META_GNOME_minimal_REMOVE=""
+META_GNOME_standard_REMOVE="popularity-contest friendly-recovery"
+META_GNOME_desktop_REMOVE="ubuntu-docs ubuntu-artwork apport-gtk hwtest-gtk usplash-theme-ubuntu ubuntu-gdm-themes"
+META_GNOME_desktop_REMOVE="${META_desktop_REMOVE} ubufox firefox-gnome-support app-install-data-commercial"
+META_GNOME_desktop_REMOVE="${META_desktop_REMOVE} tomboy f-spot ubuntu-sounds"
+
+# Package versioning is still in the config{,.local} files

@@ -1,0 +1,56 @@
+#!/bin/bash
+#
+#    Copyright (C) 2010 Karl Goetz
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+#
+
+
+. config
+
+rm -rf $WORKINGDIR
+mkdir -p $WORKINGDIR
+cd $WORKINGDIR
+
+apt-get source apt
+apt-get --yes build-dep apt
+cd apt-*
+
+rm doc/examples/sources.list
+cat << EOF >> doc/examples/sources.list
+## DolphinOS MAIN Repo
+deb http://repo.dolphin-os.net/dolphinos dusky main universe multiverse restricted
+deb-src http://repo.dolphin-os.net/dolphinos dusky main universe multiverse restricted
+
+## DolphinOS SECURITY Repo
+deb http://repo.dolphin-os.net/dolphinos dusky-security main universe multiverse restricted
+deb-src http://repo.dolphin-os.net/dolphinos dusky-security main universe multiverse restricted
+
+## DolphinOS UPDATES Repo
+deb http://repo.dolphin-os.net/dolphinos dusky-updates main universe multiverse restricted
+deb-src http://repo.dolphin-os.net/dolphinos dusky-updates main universe multiverse restricted
+
+## DolphinOS BACKPORTS Repo
+deb http://repo.dolphin-os.net/dolphinos dusky-backports main universe multiverse restricted
+deb-src http://repo.dolphin-os.net/dolphinos dusky-backports main universe multiverse restricted
+
+## DolphinOS MATE DE Repo
+deb http://repo.dolphin-os.net/dolphinos dusky-mate main
+deb-src http://repo.dolphin-os.net/dolphinos dusky-mate main
+EOF
+
+echo | dch -D $RELEASE -v $(sed  -n '1s#^.*(\(.*\)).*#\1'${DISTRONAME_L}${APT_VERSION}'#p' debian/changelog) "Changed for $DISTRONAME"
+
+dpkg-buildpackage $DPKGOPTS

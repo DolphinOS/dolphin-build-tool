@@ -1,0 +1,15 @@
+
+Suite: hardy
+ParentSuite: deltah
+RepositoryType: deb
+BaseURI: http://ppa.launchpad.net/gnuzilla-team/ppa/ubuntu/
+MatchURI: http://ppa.launchpad.net/gnuzilla-team/ppa/ubuntu/
+Description: GNU Icecat
+
+Suite: ./
+ParentSuite: deltah
+RepositoryType: deb
+BaseURI: http://www.gnutelephony.org/archive/gnewsense
+MatchURI: http://www.gnutelephony.org/archive/gnewsense
+Description: GNU telephony
+

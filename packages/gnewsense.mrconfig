@@ -1,0 +1,28 @@
+[deltah-updates/gnash]
+chain = false
+checkout = bzr branch bzr://sandbox.gnewsense.org/packages-deltah/gnash gnash
+
+[deltah/gnewsense-gdm-themes]
+chain = false
+checkout = bzr branch bzr://sandbox.gnewsense.org/packages-deltah/gnewsense-gdm-themes gnewsense-gdm-themes
+
+[deltah/gnewsense-theme]
+chain = false
+checkout = bzr branch bzr://sandbox.gnewsense.org/packages-deltah/gnewsense-theme gnewsense-theme
+
+[deltah/gnewsense-wallpapers]
+chain = false
+checkout = bzr branch bzr://sandbox.gnewsense.org/packages-deltah/gnewsense-wallpapers gnewsense-wallpapers
+
+[deltah/gnote]
+chain = false
+checkout = bzr branch bzr://sandbox.gnewsense.org/packages-deltah/gnote gnote
+
+[deltah/openoffice.org-fix]
+chain = false
+checkout = bzr branch bzr://sandbox.gnewsense.org/packages-deltah/openoffice.org-fix openoffice.org-fix
+
+[deltah/usplash-theme-gnewsense]
+chain = false
+checkout = bzr branch bzr://sandbox.gnewsense.org/packages-deltah/usplash-theme-gnewsense usplash-theme-gnewsense
+

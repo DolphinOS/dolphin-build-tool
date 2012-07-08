@@ -1,0 +1,49 @@
+#!/bin/bash
+
+###############################################################################
+#    (C) 2012 hyperclock (aka Jimmy M. Coleman)
+#	 website:  www.dolphin-os.net
+#	 email:    hyperclock(at)dolphin-os(dot)net
+#	 git:	   https://github.com/hyperclock/dolphin-build-tool
+# 
+###############################################################################
+###############################################################################
+#    dolphin-build-tool - Scripts designed to build DolphinOS based on Ubuntu.
+#
+#    dolphin-build-tool is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    dolphin-build-tool is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy (see docs/gpl-3.0.txt) of the GNU General 
+#    Public License along with dolphin-build-tool.  If not, see 
+#    <http://www.gnu.org/licenses/>.
+#
+################################################################################
+################################ INFO ##########################################
+#
+#	Derived from the scripts used by the gNewSense Project.
+#	See the original scripts at http://gnewsense.org
+#
+#	Original (C) 2006 - 2009  Brian Brazil
+#
+#################################################################################
+
+#
+
+# Pushes the repo to the mirror
+
+
+. config
+
+
+date '+%s%n%c' > $REPODST/dists/.last_push_repo
+rsync -va $RSYNC_OPTIONS $REPODST/pool $RSYNC_DEST/
+rsync -va $RSYNC_OPTIONS --delete $REPODST/dists $RSYNC_DEST/
+# Can only delete after dists is updated
+rsync -va --delete --delete-excluded $RSYNC_OPTIONS $REPODST/pool $RSYNC_DEST/
