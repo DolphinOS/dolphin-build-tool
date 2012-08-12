@@ -26,7 +26,7 @@ MIRRORDIST=precise
 #  local MATE mirror
 # ----------------------
 MATE_MIRRORLOCAL=file:/apt-mirror/mirror/packages.mate-desktop.org/repo/ubuntu
-MATE_MIRROR=http://repo.mate-desktop.org/repo/ubuntu
+MATE_MIRROR=http://repo.mate-desktop.org/ubuntu
 MATE_MIRRORDIST=precise
 
 # ---------------------

@@ -27,7 +27,7 @@ DscIndices: Sources Release . .gz
 Origin: $DISTRONAME
 Label: $DISTRONAME
 Codename: $RELEASE
-Update: Upstream Upstream-mate Upstream-media     # Upstream-trinity Upstream-trinitybd
+Update: Upstream Upstream-mate  # Upstream-media     # Upstream-trinity Upstream-trinitybd
 Architectures: $ALL_REPO_ARCHES source
 Components: main universe multiverse restricted
 UDebComponents: main
@@ -44,7 +44,7 @@ Method: $MIRROR
 Suite: ${MIRRORDIST}-security
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
-FilterFormula: Priority (==required)
+#FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream
@@ -52,7 +52,7 @@ Method: $MIRROR
 Suite: $MIRRORDIST
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
-FilterFormula: Priority (==required)
+#FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-mate
@@ -60,7 +60,7 @@ Method: $MATE_MIRROR
 Suite: $MATE_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
-FilterFormula: Priority (==required)
+#FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-trinity
@@ -68,7 +68,7 @@ Method: $TRINITY_MIRROR
 Suite: $TRINITY_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
-FilterFormula: Priority (==required)
+#FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-trinitybd
@@ -76,7 +76,7 @@ Method: $TRINITYBD_MIRROR
 Suite: $TRINITYBD_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
-FilterFormula: Priority (==required)
+#FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-media
@@ -84,7 +84,7 @@ Method: $MEDIA_MIRROR
 Suite: $MEDIA_MIRRORDIST
 Components: free>main non-free>restricted
 #FilterList: install purge-hardy
-FilterFormula: Priority (==required)
+#FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 EOF
 
@@ -96,7 +96,7 @@ Method: $MIRROR
 Suite: ${MIRRORDIST}-updates
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
-FilterFormula: Priority (==required)
+#FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 EOF
 
@@ -125,7 +125,7 @@ Method: $MIRROR
 Suite: ${MIRRORDIST}-backports
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
-FilterFormula: Priority (==required)
+#FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 EOF
 

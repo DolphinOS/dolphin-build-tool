@@ -63,5 +63,5 @@ if ! mountpoint $DIR/proc; then
 	mount proc -t proc $DIR/proc
 fi
 
-chroot $DIR bash -c "apt-get install aptitude && set -ex; DEBIAN_PRIORITY=critical aptitude -y update && aptitude -y dist-upgrade && 
+chroot $DIR bash -c "apt-get install -y aptitude && set -ex; DEBIAN_PRIORITY=critical aptitude -y update && aptitude -y dist-upgrade && 
 aptitude -y install build-essential kernel-wedge imagemagick netpbm fakeroot sharutils devscripts unifdef equivs $CHROOT_EXTRA_PACKAGES"
