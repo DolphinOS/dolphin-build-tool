@@ -64,7 +64,7 @@ BASE_RELEASE=dusky
 TAGLINE=""
 
 # This is the 8 character key ID, not the full fingerprint
-SIGNINGKEY=525AAE5D
+SIGNINGKEY=5BC27A2A
 
 # Name and email address for changes. Syntax is important.
 export MAINTINFO='Jimmy M Coleman <hyperclock@dolphin-os.net>'

@@ -44,6 +44,7 @@ Method: $MIRRORLOCAL
 Suite: ${MIRRORDIST}-security
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
+FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream
@@ -51,6 +52,7 @@ Method: $MIRRORLOCAL
 Suite: $MIRRORDIST
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
+FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-mate
@@ -58,6 +60,7 @@ Method: $MATE_MIRRORLOCAL
 Suite: $MATE_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
+FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-trinity
@@ -65,6 +68,7 @@ Method: $TRINITY_MIRRORLOCAL
 Suite: $TRINITY_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
+FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-trinitybd
@@ -72,6 +76,7 @@ Method: $TRINITYBD_MIRRORLOCAL
 Suite: $TRINITYBD_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
+FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-media
@@ -79,6 +84,7 @@ Method: $MEDIA_MIRRORLOCAL
 Suite: $MEDIA_MIRRORDIST
 Components: free>main non-free>restricted
 #FilterList: install purge-hardy
+FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 EOF
 
@@ -90,6 +96,7 @@ Method: $MIRRORLOCAL
 Suite: ${MIRRORDIST}-updates
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
+FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 EOF
 
@@ -118,6 +125,7 @@ Method: $MIRRORLOCAL
 Suite: ${MIRRORDIST}-backports
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
+FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 EOF
 
