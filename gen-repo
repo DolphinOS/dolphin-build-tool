@@ -27,7 +27,7 @@ DscIndices: Sources Release . .gz
 Origin: $DISTRONAME
 Label: $DISTRONAME
 Codename: $RELEASE
-Update: Upstream
+Update: Upstream Upstream-mate Upstream-media     # Upstream-trinity Upstream-trinitybd
 Architectures: $ALL_REPO_ARCHES source
 Components: main universe multiverse restricted
 UDebComponents: main
@@ -36,42 +36,6 @@ DscIndices: Sources Release . .gz
 #DebOverride: override.$RELEASE.bin
 #UDebOverride: override.$RELEASE.bin
 #DscOverride: override.$RELEASE.src
-
-Origin: $DISTRONAME
-Label: $DISTRONAME
-Codename: ${RELEASE}-mate
-Update: Upstream-mate
-Architectures: $ALL_REPO_ARCHES source
-Components: main 
-SignWith: $SIGNINGKEY
-DscIndices: Sources Release . .gz
-
-Origin: $DISTRONAME
-Label: $DISTRONAME
-Codename: ${RELEASE}-trinity
-Update: Upstream-mate
-Architectures: $ALL_REPO_ARCHES source
-Components: main 
-SignWith: $SIGNINGKEY
-DscIndices: Sources Release . .gz
-
-Origin: $DISTRONAME
-Label: $DISTRONAME
-Codename: ${RELEASE}-trinitybd
-Update: Upstream-mate
-Architectures: $ALL_REPO_ARCHES source
-Components: main 
-SignWith: $SIGNINGKEY
-DscIndices: Sources Release . .gz
-
-Origin: $DISTRONAME
-Label: $DISTRONAME
-Codename: ${RELEASE}-media
-Update: Upstream-mate
-Architectures: $ALL_REPO_ARCHES source
-Components: main restricted 
-SignWith: $SIGNINGKEY
-DscIndices: Sources Release . .gz
 EOF
 
 cat >  conf/updates <<EOF

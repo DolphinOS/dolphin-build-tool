@@ -19,35 +19,35 @@ set -ex
 # local Ubuntu mirror
 # -------------------
 MIRRORLOCAL=file:/apt-mirror/mirror/archive.ubuntu.com/ubuntu
-MIRROR=http://192.168.1.105/archive.ubuntu.com/ubuntu
+MIRROR=http://archive.ubuntu.com/ubuntu
 MIRRORDIST=precise
 
 # ---------------------
 #  local MATE mirror
 # ----------------------
 MATE_MIRRORLOCAL=file:/apt-mirror/mirror/packages.mate-desktop.org/repo/ubuntu
-MATE_MIRROR=http://192.168.1.105/packages.mate-desktop.org/repo/ubuntu
+MATE_MIRROR=http://repo.mate-desktop.org/repo/ubuntu
 MATE_MIRRORDIST=precise
 
 # ---------------------
 # local TRINITY mirror
 # --------------------
 TRINITY_MIRRORLOCAL=file:/apt-mirror/mirror/ppa.quickbuild.pearsoncomputing.net/trinity/trinity-v3.5.13/ubuntu
-TRINITY_MIRROR=http://192.168.1.105/ppa.quickbuild.pearsoncomputing.net/trinity/trinity-v3.5.13/ubuntu
+TRINITY_MIRROR=http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-v3.5.13/ubuntu
 TRINITY_MIRRORDIST=onieric
 
 # -------------------------------
 # local TRINITY BUILDDEPS mirror
 # -------------------------------
 TRINITYBD_MIRRORLOCAL=file:/apt-mirror/mirror/ppa.quickbuild.pearsoncomputing.net/trinity/trinity-builddeps-v3.5.13/ubuntu
-TRINITYBD_MIRROR=http://192.168.1.105/ppa.quickbuild.pearsoncomputing.net/trinity/trinity-builddeps-v3.5.13/ubuntu
+TRINITYBD_MIRROR=http://ppa.quickbuild.pearsoncomputing.net/trinity/trinity-builddeps-v3.5.13/ubuntu
 TRINITYBD_MIRRORDIST=onieric
 
 # ------------------------
 # local Multimrdia mirror
 # ------------------------
 MEDIA_MIRRORLOCAL=file:/apt-mirror/mirror/packages.medibuntu.org
-MEDIA_MIRROR=http://192.168.1.105/packages.medibuntu.org
+MEDIA_MIRROR=http://packages.medibuntu.org
 MEDIA_MIRRORDIST=precise
 
 ## DISTRO SPECIFIC CONFIGURATION
