@@ -40,7 +40,7 @@ EOF
 
 cat >  conf/updates <<EOF
 Name: Upstream-security
-Method: $MIRRORLOCAL
+Method: $MIRROR
 Suite: ${MIRRORDIST}-security
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
@@ -48,7 +48,7 @@ FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream
-Method: $MIRRORLOCAL
+Method: $MIRROR
 Suite: $MIRRORDIST
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
@@ -56,7 +56,7 @@ FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-mate
-Method: $MATE_MIRRORLOCAL
+Method: $MATE_MIRROR
 Suite: $MATE_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
@@ -64,7 +64,7 @@ FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-trinity
-Method: $TRINITY_MIRRORLOCAL
+Method: $TRINITY_MIRROR
 Suite: $TRINITY_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
@@ -72,7 +72,7 @@ FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-trinitybd
-Method: $TRINITYBD_MIRRORLOCAL
+Method: $TRINITYBD_MIRROR
 Suite: $TRINITYBD_MIRRORDIST
 Components: main>main
 #FilterList: install purge-hardy
@@ -80,7 +80,7 @@ FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
 Name: Upstream-media
-Method: $MEDIA_MIRRORLOCAL
+Method: $MEDIA_MIRROR
 Suite: $MEDIA_MIRRORDIST
 Components: free>main non-free>restricted
 #FilterList: install purge-hardy
@@ -92,7 +92,7 @@ if [ 1 == $UPDATES ]; then
 cat >> conf/updates <<EOF
 
 Name: Upstream-updates
-Method: $MIRRORLOCAL
+Method: $MIRROR
 Suite: ${MIRRORDIST}-updates
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
@@ -121,7 +121,7 @@ if [ 1 == $BACKPORTS ]; then
 cat >> conf/updates <<EOF
 
 Name: Upstream-backports
-Method: $MIRRORLOCAL
+Method: $MIRROR
 Suite: ${MIRRORDIST}-backports
 Components: main>main universe>universe multiverse>multiverse restricted>restricted
 #FilterList: install purge-hardy
