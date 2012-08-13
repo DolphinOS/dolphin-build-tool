@@ -109,7 +109,7 @@ LOGO_COLOUR=blue	# Don't choose black or yellow
 # Changes to be made to the ubuntu-minimal etc. and packages
 META_minimal_ADD=""
 META_standard_ADD="emacs nethack bsdgames build-essential"
-META_desktop_ADD="dolphin-artwork dolphin-gdm-themes epiphany-browser openoffice.org-fix usplash-theme-dolphin discover read-edid"
+META_desktop_ADD="dolphin-artwork dolphin-gdm-themes discover read-edid"
 META_desktop_ADD="${META_desktop_ADD} gthumb gnote aspell-en"
 META_minimal_REMOVE=""
 META_standard_REMOVE="popularity-contest friendly-recovery"
