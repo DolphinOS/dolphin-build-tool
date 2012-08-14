@@ -11,6 +11,20 @@ mkdir -p $REPODST/conf
 cd $REPODST
 
 cat >  conf/distributions <<EOF
+
+Origin: $DISTRONAME
+Label: $DISTRONAME
+Codename: $RELEASE
+Update: Upstream Upstream-mate  # Upstream-media     # Upstream-trinity Upstream-trinitybd
+Architectures: $ALL_REPO_ARCHES source
+Components: main universe multiverse restricted
+UDebComponents: main
+SignWith: $SIGNINGKEY
+DscIndices: Sources Release . .gz
+#DebOverride: override.$RELEASE.bin
+#UDebOverride: override.$RELEASE.bin
+#DscOverride: override.$RELEASE.src
+
 Origin: $DISTRONAME
 Label: $DISTRONAME
 Codename: ${RELEASE}-security
@@ -26,11 +40,10 @@ DscIndices: Sources Release . .gz
 
 Origin: $DISTRONAME
 Label: $DISTRONAME
-Codename: $RELEASE
-Update: Upstream Upstream-mate  # Upstream-media     # Upstream-trinity Upstream-trinitybd
+Codename: ${RELEASE}-media
+Update: Upstream-media 
 Architectures: $ALL_REPO_ARCHES source
-Components: main universe multiverse restricted
-UDebComponents: main
+Components: main non-free
 SignWith: $SIGNINGKEY
 DscIndices: Sources Release . .gz
 #DebOverride: override.$RELEASE.bin
@@ -39,6 +52,14 @@ DscIndices: Sources Release . .gz
 EOF
 
 cat >  conf/updates <<EOF
+Name: Upstream
+Method: $MIRROR
+Suite: $MIRRORDIST
+Components: main>main universe>universe multiverse>multiverse restricted>restricted
+#FilterList: install purge-hardy
+#FilterFormula: Priority (==required)
+VerifyRelease: blindtrust
+
 Name: Upstream-security
 Method: $MIRROR
 Suite: ${MIRRORDIST}-security
@@ -47,10 +68,10 @@ Components: main>main universe>universe multiverse>multiverse restricted>restric
 #FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
-Name: Upstream
-Method: $MIRROR
-Suite: $MIRRORDIST
-Components: main>main universe>universe multiverse>multiverse restricted>restricted
+Name: Upstream-media
+Method: $MEDIA_MIRROR
+Suite: $MEDIA_MIRRORDIST
+Components: free>main non-free>restricted
 #FilterList: install purge-hardy
 #FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
@@ -79,13 +100,6 @@ Components: main>main
 #FilterFormula: Priority (==required)
 VerifyRelease: blindtrust
 
-Name: Upstream-media
-Method: $MEDIA_MIRROR
-Suite: $MEDIA_MIRRORDIST
-Components: free>main non-free>restricted
-#FilterList: install purge-hardy
-#FilterFormula: Priority (==required)
-VerifyRelease: blindtrust
 EOF
 
 if [ 1 == $UPDATES ]; then
